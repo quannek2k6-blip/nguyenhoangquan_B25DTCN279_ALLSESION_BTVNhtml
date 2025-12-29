@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký sinh viên mới</title>
+    <style>
+        body{font-family:Arial,sans-serif;background:#f4f4f4;margin:0;padding:0}
+        .container{max-width:600px;margin:30px auto;background:#fff;padding:20px;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+        h1{text-align:center;margin-bottom:20px}
+        label{display:block;margin-top:10px;font-weight:bold}
+        input,select,textarea{width:100%;padding:8px;margin-top:4px;border:1px solid #ccc;border-radius:4px}
+        .radio-group,.checkbox-group{display:flex;gap:10px;margin-top:5px}
+        .buttons{margin-top:20px;display:flex;justify-content:space-between}
+        button{padding:10px 20px;border:none;background:#28a745;color:#fff;font-size:16px;cursor:pointer;border-radius:4px}
+        button[type="reset"]{background:#dc3545}
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Đăng ký sinh viên mới</h1>
+    <form id="registrationForm">
+        <label for="fullname">Họ và tên:</label>
+        <input type="text" id="fullname" name="fullname" required>
+
+        <label for="birthdate">Ngày sinh đầy đủ:</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+
+        <label for="startMonthYear">Tháng và năm nhập học:</label>
+        <input type="month" id="startMonthYear" name="startMonthYear">
+
+        <label for="duration">Thời gian học (tháng):</label>
+        <input type="number" id="duration" name="duration" min="1">
+
+        <label>Giới tính:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="gender" value="Nam" checked> Nam</label>
+            <label><input type="radio" name="gender" value="Nữ"> Nữ</label>
+            <label><input type="radio" name="gender" value="Khác"> Khác</label>
+        </div>
+
+        <label for="email">Email sinh viên:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Mật khẩu:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="goal">Mục tiêu học tập:</label>
+        <textarea id="goal" name="goal" rows="3">Muốn trở thành lập trình viên giỏi và đóng góp cho xã hội</textarea>
+
+        <label for="campus">Cơ sở:</label>
+        <select id="campus" name="campus">
+            <option value="ha-noi">Hà Nội</option>
+            <option value="hcm">Hồ Chí Minh</option>
+            <option value="da-nang">Đà Nẵng</option>
+        </select>
+
+        <label for="avatar">Ảnh thẻ sinh viên:</label>
+        <input type="file" id="avatar" name="avatar" accept="image/*">
+
+        <label>Môn học yêu thích:</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="subjects" value="Toán học"> Toán học</label>
+            <label><input type="checkbox" name="subjects" value="Lập trình"> Lập trình</label>
+            <label><input type="checkbox" name="subjects" value="Tiếng Anh"> Tiếng Anh</label>
+            <label><input type="checkbox" name="subjects" value="Vật lý"> Vật lý</label>
+        </div>
+
+        <label for="progress">Tiến độ học tập:</label>
+        <input type="range" id="progress" name="progress" min="0" max="100">
+
+        <label for="year">Năm học thứ:</label>
+        <input type="number" id="year" name="year" min="1">
+
+        <label for="searchCourse">Tìm kiếm khóa học:</label>
+        <input type="search" id="searchCourse" name="searchCourse">
+
+        <label for="favcolor">Màu sắc yêu thích:</label>
+        <input type="color" id="favcolor" name="favcolor">
+
+        <div class="buttons">
+            <button type="reset">Hủy / Làm mới</button>
+            <button type="submit">Gửi</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    document.getElementById('registrationForm').addEventListener('submit',function(e){
+        e.preventDefault();
+        const formData=new FormData(this);
+        const output={};
+        for(let[key,value]of formData.entries()){
+            if(output[key]){
+                if(!Array.isArray(output[key]))output[key]=[output[key]];
+                output[key].push(value);
+            }else output[key]=value;
+        }
+        alert("Dữ liệu bạn gửi:\n"+JSON.stringify(output,null,2));
+    });
+</script>
+</body>
+</html>
