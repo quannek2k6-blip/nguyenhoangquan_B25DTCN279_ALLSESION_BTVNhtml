@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nha Khoa Rikkei</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1e90ff;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #1e90ff;
+            border-bottom: 2px solid #1e90ff;
+            padding-bottom: 8px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #555;
+            margin-bottom: 40px;
+        }
+        .intro-text {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            display: block;
+            margin: 30px auto;
+        }
+        ul {
+            padding-left: 30px;
+        }
+        li {
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Nha Khoa Rikkei</h1>
+        <h1>Chăm sóc răng miệng – Mang lại nụ cười tươi sáng</h1>
+
+        <p class="subtitle">
+            Phòng khám Nha khoa Rikkei chuyên cung cấp các dịch vụ chăm sóc răng miệng hiện đại và uy tín.
+        </p>
+
+        <div class="intro-text">
+            <p>Phòng khám Nha khoa Rikkei chuyên cung cấp các dịch vụ chăm sóc răng miệng hiện đại và uy tín.</p>
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1588776814546-1fb2b2f5f5ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+             alt="Phòng khám nha khoa hiện đại với 2 ghế nha">
+
+        <h2>Các Cơ Sở Của Chúng Tôi</h2>
+        <ul>
+            <li><strong>Cơ sở 1:</strong> 123 Đường ABC, Quận 1, TP.HCM</li>
+            <li><strong>Cơ sở 2:</strong> 456 Đường XYZ, Quận 2, TP.HCM</li>
+            <li><strong>Cơ sở 3:</strong> 789 Đường DEF, Quận 3, TP.HCM</li>
+            <li><strong>Cơ sở 4:</strong> 101 Đường GHI, Quận 4, TP.HCM</li>
+        </ul>
+
+        <!-- Bạn có thể thêm các phần khác như Dịch vụ, Đội ngũ, Form phản hồi... nếu muốn -->
+    </div>
+
+</body>
+</html>
