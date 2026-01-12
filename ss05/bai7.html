@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Địa Chỉ Phòng Khám Nha Khoa Rikkei</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      margin: 0;
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .header-section {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .main-title {
+      color: #1e90ff;
+      font-size: 2.4rem;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      color: #555;
+      font-size: 1.3rem;
+      font-weight: 500;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
+      margin-bottom: 60px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      transition: transform 0.4s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.04);
+    }
+
+    .locations-section {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.07);
+      padding: 40px;
+    }
+
+    .locations-title {
+      color: #1e90ff;
+      text-align: center;
+      font-size: 1.9rem;
+      margin: 0 0 35px 0;
+    }
+
+    .location-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 20px;
+    }
+
+    .location-item {
+      background-color: #f0f8ff;
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 5px solid #1e90ff;
+      transition: all 0.3s ease;
+    }
+
+    .location-item:hover {
+      transform: translateX(8px);
+      box-shadow: 0 8px 20px rgba(30, 144, 255, 0.15);
+    }
+
+    .location-item strong {
+      color: #1e90ff;
+      font-size: 1.2rem;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .main-title {
+        font-size: 2rem;
+      }
+      
+      .gallery img {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header-section">
+      <h1 class="main-title">Chăm sóc răng miệng – Mang lại nụ cười tươi sáng</h1>
+      <p class="subtitle">
+        Phòng khám Nha khoa Rikkei chuyên cung cấp các dịch vụ chăm sóc răng miệng hiện đại và uy tín.
+      </p>
+    </div>
+
+    <!-- Gallery minh họa phòng khám -->
+    <div class="gallery">
+      <img src="https://thumbs.dreamstime.com/b/modern-dental-office-interior-blue-accents-marble-flooring-featuring-chair-cabinet-plant-mirror-room-well-lit-323443904.jpg" alt="Phòng khám hiện đại">
+      <img src="https://www.decorilla.com/online-decorating/wp-content/uploads/2018/09/dental-office-interior-design-joe-architects-Dentistry_at_Golden_Ridge_Golden-colorado.jpg" alt="Không gian điều trị chuyên nghiệp">
+      <img src="https://thumbs.dreamstime.com/b/bright-modern-dental-office-interior-lighting-chair-equipment-clean-organized-environment-326391755.jpg" alt="Ghế nha khoa hiện đại">
+      <img src="https://thumbs.dreamstime.com/b/interior-modern-dentists-office-bright-comfortable-operatory-patient-chair-lighting-other-equipment-201127639.jpg" alt="Phòng khám sạch sẽ">
+    </div>
+
+    <!-- Phần địa chỉ -->
+    <div class="locations-section">
+      <h2 class="locations-title">Các Cơ Sở Của Chúng Tôi</h2>
+      
+      <ul class="location-list">
+        <li class="location-item">
+          <strong>Cơ sở 1:</strong> 123 Đường ABC, Quận 1, TP.HCM
+        </li>
+        <li class="location-item">
+          <strong>Cơ sở 2:</strong> 456 Đường XYZ, Quận 2, TP.HCM
+        </li>
+        <li class="location-item">
+          <strong>Cơ sở 3:</strong> 789 Đường DEF, Quận 3, TP.HCM
+        </li>
+        <li class="location-item">
+          <strong>Cơ sở 4:</strong> 101 Đường GHI, Quận 4, TP.HCM
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>

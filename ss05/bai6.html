@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Giới Thiệu Đội Ngũ Bác Sĩ</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      margin: 0;
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h2.main-title {
+      text-align: center;
+      color: #1e90ff;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+    }
+
+    .doctor-card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      overflow: hidden;
+      margin-bottom: 40px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .doctor-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    }
+
+    .doctor-image-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .doctor-image-container::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: #e6f7ff;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+
+    .doctor-image-container:hover::after {
+      opacity: 0.35;
+    }
+
+    .doctor-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .doctor-card:hover .doctor-image {
+      transform: scale(1.08);
+    }
+
+    .doctor-info {
+      padding: 25px 30px;
+      text-align: center;
+    }
+
+    .doctor-name {
+      color: #1e90ff;
+      font-size: 1.6rem;
+      margin: 0 0 8px 0;
+      font-weight: bold;
+    }
+
+    .doctor-specialty {
+      color: #555;
+      font-size: 1.1rem;
+      margin: 0 0 15px 0;
+    }
+
+    .services-section {
+      margin-top: 50px;
+      padding: 30px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .services-title {
+      color: #1e90ff;
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+    }
+
+    .services-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .services-list li {
+      font-size: 1.1rem;
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+    }
+
+    .services-list li:last-child {
+      border-bottom: none;
+    }
+
+    @media (max-width: 600px) {
+      h2.main-title {
+        font-size: 1.8rem;
+      }
+      
+      .doctor-name {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2 class="main-title">Đội Ngũ Bác Sĩ</h2>
+
+    <div class="doctor-card">
+      <div class="doctor-image-container">
+        <!-- Thay bằng ảnh thật của bạn -->
+        <img 
+          src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+          alt="Bác sĩ A" 
+          class="doctor-image"
+        >
+      </div>
+
+      <div class="doctor-info">
+        <h3 class="doctor-name">Bác sĩ A</h3>
+        <p class="doctor-specialty">Chuyên khoa Nha khoa tổng quát</p>
+      </div>
+    </div>
+
+    <div class="services-section">
+      <h3 class="services-title">Dịch Vụ Nha Khoa</h3>
+      <ul class="services-list">
+        <li>Khám và tư vấn răng miệng tổng quát</li>
+        <li>Tẩy trắng răng</li>
+        <li>Niềng răng thẩm mỹ</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>
