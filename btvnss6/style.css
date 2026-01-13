@@ -1,0 +1,129 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: whitesmoke;
+    color: black;
+    font-size: 18px;
+}
+
+.menu {
+    background-color: aliceblue;
+    text-align: center;
+}
+
+.menu a {
+    color: #095b86;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.menu a:hover {
+    color: white;
+    background-color: #158eca;
+}
+
+h1 {
+    color: darkslategrey;
+    text-align: center;
+    background-color: lightcyan;
+    font-size: 32px;
+}
+
+h2 {
+    color: darkslategrey;
+    font-size: 24px;
+}
+
+.section {
+    background-color: white;
+}
+
+.service-item {
+    color: black;
+}
+
+.service-item:hover {
+    background-color: aliceblue;
+    color: #095b86;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    font-size: 14px;
+}
+
+th {
+    background-color: aliceblue;
+    color: #095b86;
+}
+
+td {
+    background-color: aliceblue;
+}
+
+th,
+td {
+    border: 1px solid darkslategrey;
+    padding: 20px;
+}
+
+tr:hover td {
+    background-color: aliceblue;
+}
+
+.section{
+    background-color: white;
+}
+
+.section form {
+    background-color: white;
+    text-align: center;
+}
+
+.section form label {
+    display: block;
+    color: darkslategrey;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.section form input,
+.section form select,
+.section form textarea {
+    display: inline-block;
+    font-size: 18px;
+}
+
+.section form input:focus,
+.section form select:focus,
+.section form textarea:focus {
+    background-color: aliceblue;
+}
+
+.section form textarea::placeholder {
+    color: darkslategrey;
+}
+
+.section form input[type="submit"] {
+    background-color: #158eca;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.section form input[type="submit"]:hover {
+    background-color: darkslategrey;
+}
+
+.footer {
+    background-color: darkslategrey;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+}
+
+.footer p {
+    margin: 4px 0;
+}
