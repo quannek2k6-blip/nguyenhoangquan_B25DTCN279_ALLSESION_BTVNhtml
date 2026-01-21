@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elearning Dashboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    .search-bar {
+      flex: 1;
+      max-width: 400px;
+      margin: 0 30px;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    /* Welcome block */
+    .welcome {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      margin: 30px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .welcome-text h1 {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    .progress-container {
+      width: 220px;
+    }
+
+    .progress-label {
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+      text-align: right;
+    }
+
+    .progress-bar {
+      height: 10px;
+      background: #e0e0e0;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 68%;          /* thay đổi theo tiến độ thực tế */
+      background: #007bff;
+      border-radius: 5px;
+    }
+
+    /* Sections */
+    h2 {
+      margin: 40px 0 20px;
+      font-size: 1.5rem;
+      color: #222;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
+    }
+
+    .course-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .course-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .course-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .course-info {
+      padding: 18px;
+    }
+
+    .course-info h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+
+    .completion {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .btn-continue {
+      display: inline-block;
+      background: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Suggested courses - nhỏ hơn một chút */
+    .suggested-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+      .header-inner {
+        flex-wrap: wrap;
+      }
+
+      .search-bar {
+        display: none;
+      }
+
+      .nav-menu {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .welcome {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .progress-container {
+        width: 100%;
+      }
+
+      .progress-label {
+        text-align: center;
+      }
+
+      /* Card tự động stack dọc nhờ grid auto-fit */
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 1.4rem;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container header-inner">
+      <div class="logo">Elearning</div>
+
+      <div class="search-bar">
+        <input type="text" placeholder="Tìm khóa học...">
+      </div>
+
+      <div class="nav-menu">
+        <a href="#">Khóa học</a>
+        <a href="#">Tiến độ</a>
+        <a href="#">Hồ sơ</a>
+      </div>
+
+      <div class="hamburger">☰</div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <div class="welcome">
+      <div class="welcome-text">
+        <h1>Xin chào, Bạn tôi!</h1>
+        <p>Chúc bạn học tập hiệu quả hôm nay</p>
+      </div>
+      <div class="progress-container">
+        <div class="progress-label">Tiến độ tổng: 68%</div>
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Khóa học đang học</h2>
+    <div class="course-grid">
+      <div class="course-card">
+        <img src="https://images.unsplash.com/photo-1555066931-bf19c65c9b2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="CSS Flexbox & Grid">
+        <div class="course-info">
+          <h3>CSS Flexbox & Grid</h3>
+          <p class="completion">Hoàn thành: 85%</p>
+          <a href="#" class="btn-continue">Tiếp tục học</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="JavaScript Cơ bản">
+        <div class="course-info">
+          <h3>JavaScript Cơ bản</h3>
+          <p class="completion">Hoàn thành: 42%</p>
+          <a href="#" class="btn-continue">Tiếp tục học</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <img src="https://images.unsplash.com/photo-1516321310764-9f3c9619d7d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Responsive Web Design">
+        <div class="course-info">
+          <h3>Responsive Web Design</h3>
+          <p class="completion">Hoàn thành: 95%</p>
+          <a href="#" class="btn-continue">Tiếp tục học</a>
+        </div>
+      </div>
+    </div>
+
+    <h2>Khóa học gợi ý</h2>
+    <div class="suggested-grid">
+      <div class="course-card">
+        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="React cho người mới">
+        <div class="course-info">
+          <h3>React cho người mới</h3>
+          <p>Bắt đầu ngay hôm nay</p>
+          <a href="#" class="btn-continue">Bắt đầu học</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Python Cơ bản">
+        <div class="course-info">
+          <h3>Python Cơ bản</h3>
+          <p>Phù hợp beginner</p>
+          <a href="#" class="btn-continue">Bắt đầu học</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
