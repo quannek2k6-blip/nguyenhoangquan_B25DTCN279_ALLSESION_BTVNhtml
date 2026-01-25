@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+}
+
+/* Header */
+.header {
+    background: #020617;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn-login {
+    background: #38bdf8;
+    padding: 6px 12px;
+    border-radius: 5px;
+    color: black;
+}
+
+/* Hero */
+.hero {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(to right, #020617, #1e293b);
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.btn-main {
+    background: #38bdf8;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: black;
+}
+
+/* Sections */
+section {
+    padding: 50px 40px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.movie-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.movie {
+    background: #1e293b;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Register */
+.register form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.register input {
+    padding: 10px;
+    margin: 8px 0 16px;
+    border-radius: 5px;
+    border: none;
+}
+
+.register button {
+    padding: 10px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    background: #020617;
+    padding: 40px;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 30px;
+}
+
+.copy {
+    text-align: center;
+    margin-top: 30px;
+    color: #94a3b8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .hero h1 {
+        font-size: 26px;
+    }
+}
