@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f4f9;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logo .rk {
+  color: #e53935;
+}
+
+.logo small {
+  display: block;
+  font-size: 11px;
+  color: #999;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.nav a.active {
+  background: #eef1ff;
+  color: #4f5cf0;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+/* BANNER */
+.banner {
+  background: linear-gradient(135deg, #5f63f2, #4b4fe0);
+  color: #fff;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.banner h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .user {
+    flex-direction: column;
+  }
+
+  .banner h1 {
+    font-size: 28px;
+  }
+}
